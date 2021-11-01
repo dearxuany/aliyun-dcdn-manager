@@ -1,0 +1,14 @@
+aliyun-python-sdk-core==2.13.30
+aliyun-python-sdk-dcdn==2.1.2
+cffi==1.14.4
+chardet==4.0.0
+cryptography==3.2.1
+idna==2.10
+jmespath==0.10.0
+kafka-python==2.0.2
+pycparser==2.20
+PyYAML==5.4.1
+requests==2.25.1
+selenium==3.141.0
+six==1.15.0
+urllib3==1.25.10

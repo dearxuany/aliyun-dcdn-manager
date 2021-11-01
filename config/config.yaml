@@ -1,0 +1,121 @@
+dev:
+  env: dev
+
+
+qas:
+  env: qas
+  accessKeyId: aliyunacesskeyid
+  accessSecret: aliyunaccesssecret
+  regionID: cn-shenzhen
+  waitTimeBeforeFlush: 60
+  waitTimeBeforePreload: 10
+  preloadMQUse: kafka
+  kafkaServer: 10.0.0.50:9092
+  kafkaTopic: qas_aliyun-dcdn-preload
+  kafkaGroupID: qas_aliyun-dcdn-manager-preload
+  application:
+    full-station:
+      web3.dearxuany.com.cn:
+        enable: False
+        protocol: http,https
+        flushType: Directory
+        flushPath: /
+      web.dearxuany.com.cn:
+        enable: True
+        protocol: http,https
+        flushType: Directory
+        flushPath: /
+    dearxuany-front-h5:
+      web3.dearxuany.com.cn:
+        enable: True
+        protocol: http,https        
+        flushType: Directory
+        flushPath: /front
+        flushURI: js/matomo.js,index.html,js/nim/NIM_Web_SDK_v.js
+        preload: disable
+        preloadProtocol: https
+      web.dearxuany.com.cn:
+        enable: True
+        protocol: http,https
+        flushType: Directory
+        flushPath: /front
+        flushURI: js/matomo.js,index.html,js/nim/NIM_Web_SDK_v.js
+        preload: disable
+        preloadProtocol: https
+    dearxuany-front:
+      web3.dearxuany.com.cn:
+        enable: False
+        protocol: http,https
+        flushType: File
+        flushPath: /product
+        flushURI: index.html
+        preload: disable
+        preloadProtocol: https
+      web.dearxuany.com.cn:
+        enable: True
+        protocol: http,https
+        flushType: Directory
+        flushPath: /product
+        flushURI: index.html
+        preload: disable
+        preloadProtocol: https
+    dearxuany-advertising-front:
+      m.dearxuany.com.cn:
+        enable: True
+        protocol: http,https
+        flushType: Directory
+        flushPath: /mobile
+        flushURI: index.html
+        preload: disable
+        preloadProtocol: https
+
+
+uat:
+  env: uat
+
+
+prd:
+  env: prd
+  accessKeyId: aliyunacesskeyid
+  accessSecret: aliyunaccesssecret
+  regionID: cn-shenzhen
+  waitTimeBeforeFlush: 60
+  waitTimeBeforePreload: 10
+  preloadMQUse: kafka
+  kafkaServer: 192.16.40.110:9092,192.16.40.111:9092,192.16.40.112:9092
+  kafkaTopic: prd_aliyun-dcdn-preload
+  kafkaGroupID: prd_aliyun-dcdn-manager-preload
+  application:
+    full-station:
+      web.dearxuany.com:
+        enable: True
+        protocol: http,https
+        flushType: Directory
+        flushPath: /
+    dearxuany-front-h5:
+      web.dearxuany.com:
+        enable: True
+        protocol: http,https
+        flushType: Directory
+        flushPath: /front
+        flushURI: js/matomo.js,index.html,js/nim/NIM_Web_SDK_v.js
+        preload: enable
+        preloadProtocol: https
+    dearxuany-front:
+      web.dearxuany.com:
+        enable: True
+        protocol: http,https
+        flushType: Directory
+        flushPath: /product
+        flushURI: index.html
+        preload: enable
+        preloadProtocol: https
+    dearxuany-advertising-front:
+      m.rui365.com.cn:
+        enable: True
+        protocol: http,https
+        flushType: Directory
+        flushPath: /mobile
+        flushURI: index.html
+        preload: enable
+        preloadProtocol: https
