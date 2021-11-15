@@ -111,7 +111,7 @@ prd:
         preload: enable
         preloadProtocol: https
     dearxuany-advertising-front:
-      m.rui365.com.cn:
+      dearxuany.com.cn:
         enable: True
         protocol: http,https
         flushType: Directory
