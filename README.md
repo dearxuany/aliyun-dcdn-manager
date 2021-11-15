@@ -56,8 +56,8 @@ cd aliyun-dcdn-manager && sh bin/cd-dcdn-multi-actions.sh
 │   └── config.yaml                                     # 项目配置文件
 ├── data                                                
 │   └── frontend-file-list-example                      # jenkins 更版时生成的前端应用静态资源列表样例
-│       ├── dearxuany-front-build_293                     # 实际存储路径可在 --app-file-info-path 自定义
-│       ├── dearxuany-front-h5-build_766        # 文件名格式为“jenkins项目名称-build_jenkins构建号”
+│       ├── dearxuany-front-build_293                   # 实际存储路径可在 --app-file-info-path 自定义
+│       ├── dearxuany-front-h5-build_766                # 文件名格式为“jenkins项目名称-build_jenkins构建号”
 │       ├── dearxuany-front-h5-build_767
 │       └── dearxuany-front-h5-build_768
 ├── docs
